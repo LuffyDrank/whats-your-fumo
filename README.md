@@ -1,0 +1,1 @@
+A React app with automatic deployment to GitHub Pages by setting up a GitHub Actions workflow
