@@ -1,29 +1,17 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import DateBirthForm from './components/DateBirthForm'
+import './App.css'
 
-function App() {
-
-  const [name, setName] = useState('');
-
-  const url = 'https://pokeapi.co/api/v2/pokemon/1/'
-
-  const fetchPost = async (url) => {
-    const response = await fetch(url)
-    const data = await response.json()
-    setName(data.name)
-  };
-
-  useEffect(() => {
-    fetchPost(url)
-  }, [])
-
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        {name}
+    <div className='App'>
+      <header className='App-header'>
+        <div className='App-title'>What's your fumo?</div>
+        <img src='https://c.tenor.com/a_XIGQwRb9AAAAAd/touhou-fumo.gif' alt='fumo' width='50' height='50' />
       </header>
+
+      <DateBirthForm />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

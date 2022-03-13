@@ -1,5 +1,7 @@
 .App {
+  background-color: #023246;
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,14 +16,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding-top: 300px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f6f6f6;
+}
+
+.App-title {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 20px;
 }
 
 .App-link {
@@ -35,4 +42,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* CSS */
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 20px;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
 }

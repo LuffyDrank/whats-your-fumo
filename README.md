@@ -1,1 +1,1 @@
-A React app with automatic deployment to GitHub Pages by setting up a GitHub Actions workflow
+This application allows you to accurately determine what your type of fumo is by entering your year of birth.
