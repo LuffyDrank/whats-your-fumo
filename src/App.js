@@ -1,22 +1,26 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+
+  const [name, setName] = useState('');
+
+  const url = 'https://pokeapi.co/api/v2/pokemon/1/'
+
+  const fetchPost = async (url) => {
+    const response = await fetch(url)
+    const data = await response.json()
+    setName(data.name)
+  };
+
+  useEffect(() => {
+    fetchPost(url)
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React App with Github Actions.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {name}
       </header>
     </div>
   );
